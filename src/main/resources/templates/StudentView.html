@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<title>CRUD | View</title>
+</head>
+<body>
+	<section class="container">
+		<div class="card p-5 text-white student-table" style="width: 50rem;">
+			<h4 class="text-center fw-bold mb-3">ʏᴏᴜʀ ꜱᴀᴠᴇᴅ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</h4>
+			<table class="table table-hover table-dark table-bordered">
+				<tr>
+			      <th>Student ID</th>
+			      <td>:</td>
+			      <td th:text="${show.id}"></td>
+			    </tr>
+			    <tr>
+			      <th>Student Name</th>
+			      <td>:</td>
+			      <td th:text="${show.name}"></td>
+			    </tr>
+			    <tr>
+			      <th>Student Roll</th>
+			      <td>:</td>
+			      <td th:text="${show.roll}"></td>
+			    </tr>
+			    <tr>
+			      <th>Student Department</th>
+			      <td>:</td>
+			      <td th:text="${show.depart}"></td>
+			    </tr>
+			    <tr>
+			      <th>Student Section</th>
+			      <td>:</td>
+			      <td th:text="${show.sec}"></td>
+			    </tr>
+			</table>
+			
+			<h4 class="text-center fw-bold mb-3">ᴜᴘᴅᴀᴛᴇ ʏᴏᴜʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</h4>
+			
+			<form class="row g-3" action="updateStudent" method="post">
+			  <div class="col-10 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student ID" name="id" required>
+			  </div>
+			  <div class="d-grid col-2 mx-auto">
+			    <button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Update Data</button>
+			  </div>
+			</form>
+			
+			<h5 class="text-center mt-3">------------------------------------------ 𝖔𝖗 -----------------------------------------</h5>
+			
+			<h4 class="text-center fw-bold">ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴn</h4>
+			
+			<form class="row g-3" action="deleteStudent" method="post">
+			  <div class="col-10 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student ID" name="id" required>
+			  </div>
+			  <div class="d-grid col-2 mx-auto">
+			    <button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Delete Data</button>
+			  </div>
+			</form>
+		</div>
+	</section>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

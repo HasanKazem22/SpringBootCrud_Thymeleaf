@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<title>CRUD | Home</title>
+</head>
+<body>
+	<section class="container">
+		<div class="card p-5 text-white crud" style="width: 50rem;">
+			<!-- Information Save Area Start -->
+			<h4 class="text-center fw-bold mb-3">ꜱᴜʙᴍɪᴛ ʏᴏᴜʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴛᴏ ꜱᴀᴠᴇ ᴅᴀᴛᴀʙᴀꜱᴇ</h4>
+			<h6 class="text-center text-success" th:if="${success}" th:text="${success}"></h6>
+			
+			<form class="row" action="saveData" method="post">
+			  <div class="mb-3 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Name" name="name" required>
+			  </div>
+			  <div class="col-4 mb-3 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Roll" name="roll" required>
+			  </div>
+			  <div class="col-4 mb-3 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Department" name="depart" required>
+			  </div>
+			  <div class="col-4 mb-3 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Section" name="sec" required>
+			  </div>
+			  <div class="d-grid col-4 mx-auto">
+			  	<button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Save Data</button>
+			  </div>
+			</form>
+			<!-- Information Save Area End -->
+			
+			<hr>
+			
+			<!-- Single Search Area Start -->
+			<h4 class="text-center fw-bold mt-2 mb-3">ꜱᴇᴀʀᴄʜ ꜱɪɴɢʟᴇ ꜱᴛᴜᴅᴇɴᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</h4>
+			<form class="row g-3" action="searchStudent" method="post">
+			  <div class="col-10 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student ID" name="id" required>
+			  </div>
+			  <div class="d-grid col-2 mx-auto">
+			    <button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Search Data</button>
+			  </div>
+			</form>
+			<!-- Single Search Area End -->
+			
+			<hr>
+			
+			<!-- Multiple Search Area Start -->
+			<h4 class="text-center fw-bold mt-2 mb-3">ꜱᴇᴀʀᴄʜ ᴍᴜʟᴛɪᴘʟᴇ ꜱᴛᴜᴅᴇɴᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</h4>
+			<form class="row g-3" action="nameSearch" method="post">
+			  <div class="col-10 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Name" name="name" required>
+			  </div>
+			  <div class="d-grid col-2 mx-auto">
+			    <button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Search Data</button>
+			  </div>
+			</form>
+			
+			<h5 class="text-center p-2 ">𝖔𝖗</h5>
+			
+			<form class="row g-3" action="departSearch" method="post">
+			  <div class="col-10 input-group-sm">
+			    <input type="text" class="form-control rounded-0 bg-dark text-white" placeholder="Student Department" name="depart" required>
+			  </div>
+			  <div class="d-grid col-2 mx-auto">
+			    <button type="submit" class="btn btn-sm rounded-0 fw-bold save-data">Search Data</button>
+			  </div>
+			</form>
+			<!-- Multiple Search Area Start -->
+		</div>
+	</section>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	overflow-x: hidden;
+	background-color: #202123 !important;
+}
+
+.crud{
+	background-color: transparent !important;
+	border-color: #05BEB0 !important;
+	box-shadow: 0px 0px 5px 5px #05BEB0 !important;
+	margin: 60px  250px;
+}
+
+.crud input{
+	color: #ffffff;
+}
+
+.crud input::placeholder{
+	color: #ffffff;
+}
+
+.save-data{
+	background-color: #05BEB0 !important;
+	color: #ffffff !important;
+}
+
+.student-table{
+	background-color: transparent !important;
+	border-color: #05BEB0 !important;
+	box-shadow: 0px 0px 5px 5px #05BEB0 !important;
+	margin: 85px  250px;
+}
+
+.students-table{
+	background-color: transparent !important;
+	border-color: #05BEB0 !important;
+	box-shadow: 0px 0px 5px 5px #05BEB0 !important;
+	margin: 200px  250px;
+}
