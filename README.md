@@ -1,4 +1,4 @@
-## Spring Boot Crud Thymeleaf
+## Spring Boot Crud Using Thymeleaf
 
 ### Create Student Data
 ![Create_01](https://github.com/HasanKazem22/SpringBootCrud_Thymeleaf/assets/98735827/04d76667-398e-44de-847d-4bc08da24672)
